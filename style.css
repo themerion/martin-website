@@ -1,0 +1,154 @@
+body {
+    margin: 0px;
+    /*background-color: #f00;*/
+    background-color: gray;
+    background-image: url("images/martin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---------- LOGO ---------- */
+
+#header-bar {
+    background-color: gray;
+}
+
+@media (min-width: 800px) {
+
+}
+
+@media (max-width: 799px) {
+    #header-bar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #header-bar #title {
+        flex-grow: 1;
+    }
+
+    #header-bar #menu-button {
+        width: 40px;
+        height: 40px;
+        background-color: green;
+    }
+}
+
+#header-bar #title {
+    color: white;
+    text-shadow: 2px 2px #555;
+}
+
+/* ----- MENY ----- */
+
+#menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #menu .menu-item {
+        margin-left: 10px; margin-right: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    #menu {
+        display: none;
+    }
+
+    #menu.mobile-open {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ------------------------- */
+
+#main-container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Om innehållet är kortare än skärmen, se till att sidan sträcker sig hela vägen ner till botten. */
+    min-height: 100vh;
+}
+
+#page-content {
+    margin-top: 20px;
+}
+
+/* ------ Puffar ------- */
+
+.puffs .puff-header {
+    color: white;
+    background-color: #666666cc;
+
+    padding: 8px;
+    border-radius: 4px 4px 0 0;
+
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+    font-size: 18px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.puffs .puff {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /*border: 1px solid #333;*/
+}
+
+.puffs .puff-content {
+    padding: 5px;
+    color: black;
+    background-color: rgba(220,220,220,0.6);
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+    font-size: 15px;
+}
+
+@media (min-width: 800px) {
+    .puffs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .puffs .puff {
+        width: 30%;
+    }
+}
+
+@media (max-width: 799px) {
+    .puffs {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .puffs .puff {
+        margin-bottom: 10px;
+    }
+}
+
+/* -------------------------- */
+
+.single-page {
+    padding: 5px;
+    color: black;
+    background-color: rgba(220,220,220,0.6);
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+    font-size: 15px;
+}
